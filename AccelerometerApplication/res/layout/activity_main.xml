@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.accelerometerapplication.MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/labelX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/labelY"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/labelZ"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Z:"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+
+
+    <TextView
+        android:id="@+id/lableXView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/labelX"
+        android:layout_marginLeft="18dp"
+        android:layout_toRightOf="@+id/labelX"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/labelYVal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/lableXView"
+        android:layout_below="@+id/lableXView"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/labelZView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/labelX"
+        android:layout_alignLeft="@+id/labelYVal"
+        android:layout_below="@+id/labelYVal"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textViewCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnRecord"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="18dp"
+        android:text=" "
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/btnRecord"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="29dp"
+        android:layout_toRightOf="@+id/textViewCounter"
+        android:onClick="btnRecord_OnClick"
+        android:text="Record Data" />
+
+    <TextView
+        android:id="@+id/txtCorner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewCounter"
+        android:layout_alignLeft="@+id/txtAcceleration"
+        android:layout_marginBottom="25dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <Button
+        android:id="@+id/btnReset"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnRecord"
+        android:layout_alignBottom="@+id/btnRecord"
+        android:onClick="btnReset_OnClick"
+        android:text="Reset" />
+
+    <TextView
+        android:id="@+id/txtHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtAcceleration"
+        android:layout_alignLeft="@+id/txtAcceleration"
+        android:layout_marginBottom="18dp"
+        android:text="Heading:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/txtAcceleration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtCorner"
+        android:layout_alignLeft="@+id/btnReset"
+        android:layout_marginBottom="18dp"
+        android:text="Acceleration:"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tvLastHead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/txtHeading"
+        android:layout_alignLeft="@+id/txtHeading"
+        android:layout_marginBottom="20dp"
+        android:text="Medium Text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+</RelativeLayout>
